@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="/css/home.css">
+
+<div id="home-container">
+  <section id="feed-posts">
+
+    <% if( !locals.user) { %>
+      <h1 id="habitid">Welcome to Habit Tracker App</h1>
+
+      <section class="rotatingCube">
+        <div class="container">
+          <!-- <h1>Welcome to Habit Tracker</h1> -->
+          <div class="animation-container">
+            <div class="cube">
+              <div class="face front">Front</div>
+              <div class="face back">Back</div>
+              <div class="face top">Top</div>
+              <div class="face bottom">Bottom</div>
+              <div class="face left">Left</div>
+              <div class="face right">Right</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <% } %>
+
+
+        <% if(locals.user){ %>
+
+          <div class="card text-center ">
+            <div class="card-body">
+              <h3 id="card-title">Habit Tracker App</h3>
+              <p id="card-text" style="font-size: 20px;" class="border border-primary">
+                Track habits with our Habit Tracker App.
+              </p>
+              <p class="card-text" style="font-size: 20px;" >
+                All details like streaks, completed days and views are based on 7 days status.
+              </p>
+              <button id="dash-buttton">
+                <h4 style="background-color:white; font-style:italic;">Click-Here: To Open Application-Dashboard</h4>
+              <a href="/habit/dashboard" >Open Habit tracker Dashboard</a>
+            </button>
+            </div>
+          </div>
+
+          <% } %>
+
+
+  </section>
+
+  <section id="user-friends">
+    <h4>Update-User</h4>
+    <% for(u of all_users){ %>
+      <p>
+        <a href="/users/profile/<%= u.id %>">
+          <%= u.name %>
+        </a>
+      </p>
+      <% } %>
+  </section>
+
+
+</div>
