@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 
-mongoose.connect('mongodb://127.0.0.1/Habit_Tracker');
+mongoose.connect('mongodb://127.0.0.1/Habit_Track');
 
 const db = mongoose.connection;
 
