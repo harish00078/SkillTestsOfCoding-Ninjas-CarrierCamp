@@ -121,6 +121,8 @@ let updateData = (habits) => {
     let id = habit.id;
     let diff = todaysDate - habit.creation_date;
 
+    // IMP => here we are updating the data of habit (days):
+
     if (diff > 0 && diff < 8) {
       for (let i = diff, j = 0; i < habit.days.length; i++, j++) {
         habit.days[j] = habit.days[i];
