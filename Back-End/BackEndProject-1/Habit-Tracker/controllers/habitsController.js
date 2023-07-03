@@ -154,6 +154,7 @@ let updateStreakandCompleted = async (habit) => {
       if (habit.days[i] == 'Done') {
         curr_completed++;
         curr_streak++;
+        
       } else {
         if (curr_streak > maxStreak) {
           maxStreak = curr_streak;
