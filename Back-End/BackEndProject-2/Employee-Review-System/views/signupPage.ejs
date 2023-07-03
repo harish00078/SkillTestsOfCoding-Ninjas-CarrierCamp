@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/signUp.css">
+<div class="main-div-signup">
+    <h1>SignUp</h1>
+    <hr>
+    <form action="/users/create" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="username" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+        <input type="hidden" name="permission" value="employee">
+        <p>By Clicking Join Now, You Agree to the Terms and Conditions,UserPolicy and User Agreements</p>
+        <button type="submit">Join Now</button>
+        <% if(!locals.user){%>
+            
+               
+                <div class="Sign">
+                    <p class="signIn">Already have an Account ==</p>
+                <a href="/users/signin"> Sign In</a>
+            </div>
+            
+            <p class="google">
+                <a href="/users/auth/google">Google-Sign-In</a>
+            </p>
+            <%}%>
+
+    </form>
+
+</div>

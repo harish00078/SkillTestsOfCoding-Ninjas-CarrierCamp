@@ -1,0 +1,72 @@
+.main-div-signin {
+  /* background-color:black; */
+  /* background-image: linear-gradient(rgb(43, 143, 224), rgb(20, 125, 125)); */
+  /* background-image: url(https://pixabay.com/images/search/car/); */
+  display: flex;
+  width: 30%;
+  margin: auto;
+  height: auto;
+  text-align: left;
+  padding: 0% 2% 2% 2%;
+  font-size: 18px;
+  margin-top: 5%;
+}
+.main-div-signin h1 {
+  /* text-align: center; */
+  /* padding-top: 4%; */
+  padding-right: 10px;
+  color: white;
+  /* margin-right:15px; */
+}
+
+.main-div-signin input {
+  width: 100%;
+  height: 20px;
+  margin: 1px 0px 10px 0px;
+  color: white;
+}
+.main-div-signin button {
+  background-color: black;
+  width: 100%;
+  color: white;
+  height: 30px;
+  margin-top: 4%;
+  /* transition: transform .2s; */
+}
+.main-div-signin button:hover {
+  /* transform: scale(1.5); */
+  color: cyan;
+}
+
+.signUp .para {
+  color: white;
+  font-size: 20px;
+  font-style: italic;
+  display: inline-block;
+}
+.signUp a{
+  color:black;
+  font-size: 20px;
+  border: 2px solid skyblue;
+
+
+
+}
+
+label {
+  color: white;
+}
+.google a {
+  color: black;
+  font-size: 25px;
+  font-style: italic;
+  width: 200px;
+  height: 50px;
+  border: 2px solid skyblue;
+}
+
+body {
+  /* background-image: linear-gradient(rgb(0, 78, 141), rgb(4, 61, 61)); */
+  background-image: linear-gradient(rgb(0, 87, 141), rgb(10, 134, 134));
+
+}
