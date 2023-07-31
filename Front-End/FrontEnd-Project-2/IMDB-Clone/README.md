@@ -20,5 +20,5 @@ after closing the browser/refreshing the browser).
 button, clicking on which should remove that movie from the list.
 
 
-=>github-link:
-=> hosted-link:
+=>github-link:https://github.com/harish00078/SkillTestsOfCoding-Ninjas-CarrierCamp/tree/master/Front-End/FrontEnd-Project-2/IMDB-Clone
+=> hosted-link:https://imdb1-clone1.netlify.app/
