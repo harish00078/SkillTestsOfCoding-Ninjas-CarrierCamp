@@ -55,7 +55,8 @@ app.use(session(
         },    
         store: new MongoStore(
             {
-                mongoUrl:'mongodb://127.0.0.1:27017/employee_review', 
+                // mongoUrl:'mongodb://127.0.0.1:27017/employee_review', 
+                mongoUrl:'mongodb+srv://harish:harish123@cluster0.0qpeyqk.mongodb.net/employee_review',
                 autoRemove: 'disabled'
             
             },
