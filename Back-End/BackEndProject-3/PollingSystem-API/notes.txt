@@ -1,0 +1,59 @@
+// => explanation of this peace of code-line:
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+Here's what each part does:
+
+-> app: This refers to an instance of the Express application. In an Express application, you create an instance of it by calling express().
+
+-> use: This is an Express middleware function. Middleware functions have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.
+
+-> bodyParser: This is a middleware that parses incoming request bodies. In this case, it's configured to parse data in the URL-encoded format.
+
+-> urlencoded({ extended: true }): 
+This is a configuration option for the bodyParser middleware. 
+It specifies that the extended option should be set to true.
+
+-> extended: When set to true, the qs library (used by body-parser) is used to parse the URL-encoded data with the querystring library. When set to false, the native Node.js querystring library is used.
+Setting extended to true allows you to use complex objects and arrays in the URL-encoded data. For example, if you have a form with fields like name=John&age=25, with extended: true, it can also handle nested objects and arrays like name=John&info[age]=25.
+
+So, the given line of code is configuring the Express application to use the bodyParser middleware for parsing incoming URL-encoded data with the option extended set to true. This is commonly used when dealing with form submissions in web applications.
+
+
+
+
+
+// => Here we learn. that what is meaning of (bodyParser) or (parse-data):
+
+In the context of web development and programming, "parse" refers to the process of analyzing and converting data from one format to another. Specifically, when we talk about parsing data in the context of an HTTP request in a web application, it means extracting and interpreting the information sent in the request.
+
+For example, when a user submits a form on a website, the form data is included in the HTTP request. This data is usually sent in a specific format, and parsing that data involves extracting meaningful information from the raw data. In the case of the line of code you provided:
+
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+The bodyParser.urlencoded middleware is used to parse incoming data from HTTP requests where the data is in the URL-encoded format. URL-encoded data is a way of representing key-value pairs in a URL, typically used with HTML forms.
+
+By (parsing) the (URL-encoded) data, the application can convert it into a more usable format, such as a (JavaScript-object). This allows the server-side code to easily work with the form data submitted by users, making it accessible and usable within the application logic.
+
+// => explaination of  (urlencoded):
+
+In the context of web development, urlencoded refers to a way of encoding data in the URL for transmission over the internet. The process involves converting data, typically in the form of key-value pairs, into a URL-friendly format.
+
+When you submit a form on a website with the application/x-www-form-urlencoded encoding type, the form data is included in the URL of the HTTP request. For example, consider a form with two fields, "name" and "age," where a user inputs "John" and "25" respectively. The URL-encoded data might look like this:
+
+makefile
+
+name=John&age=25
+Here, each key-value pair is separated by an ampersand (&), and the key and value within each pair are separated by an equal sign (=). This format allows multiple data pairs to be concatenated together in a single string, making it easy to include them in a URL.
+
+In the context of your original line of code:
+
+javascript
+Copy code
+app.use(bodyParser.urlencoded({ extended: true }));
+- This line is configuring the Express.js application to use the body-parser middleware to parse incoming data in the URL-encoded format. 
+
+// => explanation of ({extended: ture});
+The extended: true option allows the middleware to parse complex objects and arrays in addition to simple key-value pairs. This is useful when dealing with forms that include nested structures in the submitted data
