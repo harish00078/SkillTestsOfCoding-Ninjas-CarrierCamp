@@ -1,28 +1,3 @@
-// => explanation of this peace of code-line:
-
-app.use(bodyParser.urlencoded({ extended: true }));
-
-
-Here's what each part does:
-
--> app: This refers to an instance of the Express application. In an Express application, you create an instance of it by calling express().
-
--> use: This is an Express middleware function. Middleware functions have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.
-
--> bodyParser: This is a middleware that parses incoming request bodies. In this case, it's configured to parse data in the URL-encoded format.
-
--> urlencoded({ extended: true }): 
-This is a configuration option for the bodyParser middleware. 
-It specifies that the extended option should be set to true.
-
--> extended: When set to true, the qs library (used by body-parser) is used to parse the URL-encoded data with the querystring library. When set to false, the native Node.js querystring library is used.
-Setting extended to true allows you to use complex objects and arrays in the URL-encoded data. For example, if you have a form with fields like name=John&age=25, with extended: true, it can also handle nested objects and arrays like name=John&info[age]=25.
-
-So, the given line of code is configuring the Express application to use the bodyParser middleware for parsing incoming URL-encoded data with the option extended set to true. This is commonly used when dealing with form submissions in web applications.
-
-
-
-
 
 // => Here we learn. that what is meaning of (bodyParser) or (parse-data):
 
@@ -57,3 +32,31 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // => explanation of ({extended: ture});
 The extended: true option allows the middleware to parse complex objects and arrays in addition to simple key-value pairs. This is useful when dealing with forms that include nested structures in the submitted data
+
+
+
+// => explanation of this peace of code-line:
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+Here's what each part does:
+
+-> app: This refers to an instance of the Express application. In an Express application, you create an instance of it by calling express().
+
+-> use: This is an Express middleware function. Middleware functions have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.
+
+-> bodyParser: This is a middleware that parses incoming request bodies. In this case, it's configured to parse data in the URL-encoded format.
+
+-> urlencoded({ extended: true }): 
+This is a configuration option for the bodyParser middleware. 
+It specifies that the extended option should be set to true.
+
+-> extended: When set to true, the qs library (used by body-parser) is used to parse the URL-encoded data with the querystring library. When set to false, the native Node.js querystring library is used.
+Setting extended to true allows you to use complex objects and arrays in the URL-encoded data. For example, if you have a form with fields like name=John&age=25, with extended: true, it can also handle nested objects and arrays like name=John&info[age]=25.
+
+So, the given line of code is configuring the Express application to use the bodyParser middleware for parsing incoming URL-encoded data with the option extended set to true. This is commonly used when dealing with form submissions in web applications.
+
+
+
+
